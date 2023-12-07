@@ -12,7 +12,7 @@ const cookiesTableBodyElement = document.getElementById('cookies-table-body');
             let url = new URL(tab.url);
             const cookies = await chrome.cookies.getAll({domain: url.hostname});
             if (cookies.length === 0) {
-                cookiesTableBodyElement.innerHTML = '';
+                cookiesTableBodyElement.innerHTML = '<tr><td colspan="7"></td></tr>';
             } else {
                 var rows = '';
                 cookies.forEach((cookie) => {
@@ -30,9 +30,17 @@ const cookiesTableBodyElement = document.getElementById('cookies-table-body');
                 cookiesTableBodyElement.innerHTML = rows;
             }
             if (cookies) {
+                chrome.action.setBadgeBackgroundColor({
+                    tabId: tab.tabId,
+                    color: cookies.length === 0 ? [255, 255, 255, 0] : [255, 0, 0, 255]
+                });
+                chrome.action.setBadgeTextColor({
+                    tabId: tab.tabId,
+                    color: 'white'
+                });
                 chrome.action.setBadgeText({
                     tabId: tab.tabId,
-                    text: `${cookies.length}`
+                    text: cookies.length === 0 ? '' : `${cookies.length}`
                 });
             }
         } catch {
