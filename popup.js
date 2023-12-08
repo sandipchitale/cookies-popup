@@ -24,7 +24,7 @@ const cookiesTableBodyElement = document.getElementById('cookies-table-body');
                         + `<td>${cookie.secure}</td>`
                         + `<td>${cookie.sameSite}</td>`
                         + `<td>${cookie.session}</td>`
-                        + `<td>${cookie.value}</td>`
+                        + `<td title="${cookie.value}">${cookie.value}</td>`
                         + `</tr>`;
                 });
                 cookiesTableBodyElement.innerHTML = rows;
