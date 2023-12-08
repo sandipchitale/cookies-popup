@@ -19,6 +19,7 @@ const cookiesTableBodyElement = document.getElementById('cookies-table-body');
                     rows +=
                         `<tr>`
                         + `<td>${cookie.domain}</td>`
+                        + `<td>${cookie.path}</td>`
                         + `<td>${cookie.name}</td>`
                         + `<td>${cookie.httpOnly}</td>`
                         + `<td>${cookie.secure}</td>`
