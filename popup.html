@@ -3,9 +3,23 @@
   <head>
     <script src="popup.js" type="module"></script>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html, body {
+        width: 800px;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
       table {
         border-collapse: collapse;
-        width: 70vw;
+        border: 1px solid black;
       }
       th {
         text-align: start;

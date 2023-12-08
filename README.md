@@ -1,6 +1,6 @@
 # chrome.cookies
 
-This extension uses the `chrome.cookies` API to show cookies for current domain via a popup UI.
+This extension uses the `chrome.cookies` API to show cookies for current domain via a popup UI. Also shows a badge showing the count of cookies.
 
 ## Overview
 
