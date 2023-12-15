@@ -6,6 +6,8 @@ This extension uses the `chrome.cookies` API to show cookies for current domain 
 
 The extension uses `chrome.cookies.getAll()` to access and show the cookies for current tab's domain (all ports) in a popup window.
 
+It supports removal of all cookies for `localhost` or `127.0.0.1` URLs for testing purposes.
+
 ## Running this extension
 
 1. Clone this repository.

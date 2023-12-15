@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <script src="popup.js" type="module"></script>
     <style>
@@ -28,20 +28,34 @@
         padding: 5px;
         border: 1px dotted black;
       }
+
+      .remove {
+        background-color: red;
+        border-radius: 4px;
+        border: 0;
+        color: white;
+        margin-right: 10px;
+        padding-left: 3px;
+        padding-right: 4px;
+      }
+      .hidden {
+        visibility: hidden;
+      }
     </style>
+    <title>Cookies</title>
   </head>
   <body>
     <table>
       <thead>
         <tr>
           <th style="min-width: 8vw;  max-width: 8vw">Domain</th>
-          <th style="min-width: 10vw;  max-width: 10vw">Path</th>
-          <th style="min-width: 8vw;  max-width: 8vw">Name</th>
+          <th style="min-width: 10vw; max-width: 10vw">Path</th>
+          <th style="min-width: 15vw; max-width: 15vw"><button id="remove-all-cookies" class="remove" title="Remove all localhost cookies"><b>X</b></button> Name</th>
           <th style="min-width: 6vw;  max-width: 6vw">Http Only</th>
           <th style="min-width: 6vw;  max-width: 6vw">Secure</th>
           <th style="min-width: 8vw;  max-width: 8vw">Same Site</th>
           <th style="min-width: 6vw;  max-width: 6vw">Session</th>
-          <th style="min-width: 40vw; max-width: 40vw">Value</th>
+          <th style="min-width: 32vw; max-width: 32vw">Value</th>
         </tr>
       </thead>
       <tbody id="cookies-table-body">
